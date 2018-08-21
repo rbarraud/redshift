@@ -52,7 +52,7 @@ Dependencies
 * libdrm (Optional, for DRM support)
 * libxcb, libxcb-randr (Optional, for RandR support)
 * libX11, libXxf86vm (Optional, for VidMode support)
-* geoclue (Optional, for geoclue support)
+* Glib 2 (Optional, for GeoClue2 support)
 
 * python3, pygobject, pyxdg (Optional, for GUI support)
 * appindicator (Optional, for Ubuntu-style GUI status icon)
@@ -154,12 +154,12 @@ Cross-compile for Windows
 -------------------------
 
 Install MinGW and run `configure` using the following command line. Use
-`i686-w64-migw32` as host for 32-bit builds.
+`i686-w64-mingw32` as host for 32-bit builds.
 
 ``` shell
 $ ./configure --disable-drm --disable-randr --disable-vidmode --enable-wingdi \
-  --disable-geoclue --disable-gui --disable-ubuntu \
-  --host=x86_64-w64-mingw32
+  --disable-quartz --disable-geoclue2 --disable-corelocation --disable-gui \
+  --disable-ubuntu --host=x86_64-w64-mingw32
 ```
 
 
